@@ -1,10 +1,24 @@
-"use client";
+// "use client";
+// import { cva } from "class-variance-authority";
 import React from "react";
 
-const Buttons = ({ text, clicker }) => {
+// const buttonvariants = cva(" rounded-md font-semibold", {
+//   variants: {
+//     intent: {
+//       primary: " text-white bg-black dark:text-black dark:bg-white",
+//       outline: " bg-transparent text-black border-1 dark:text-white",
+//     },
+//   },
+
+//   defaultVariants: {
+//     intent: primary,
+//   },
+// });
+
+const Buttons = ({ text, clicker, bg }) => {
   return (
     <button
-      className="p-2  bg-red-500  text-white rounded-md hover:bg-red-400"
+      className={`p-2    text-white rounded-md hover:bg-red-400 ${bg}`}
       onClick={clicker}
     >
       {text}
